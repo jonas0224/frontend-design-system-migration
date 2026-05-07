@@ -1,0 +1,52 @@
+{
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "dev:turbo": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "npm run test:unit",
+    "test:unit": "vitest run --project unit",
+    "test:stories": "vitest run --project storybook",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "next": "16.2.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.1.2",
+    "@storybook/addon-a11y": "^10.3.6",
+    "@storybook/addon-docs": "^10.3.6",
+    "@storybook/addon-onboarding": "^10.3.6",
+    "@storybook/addon-vitest": "^10.3.6",
+    "@storybook/nextjs-vite": "^10.3.6",
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/browser-playwright": "^4.1.5",
+    "@vitest/coverage-v8": "^4.1.5",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.5",
+    "eslint-plugin-storybook": "^10.3.6",
+    "jsdom": "^29.1.1",
+    "playwright": "^1.59.1",
+    "prettier": "^3.8.3",
+    "storybook": "^10.3.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
+  }
+}

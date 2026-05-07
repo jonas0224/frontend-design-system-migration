@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-text-primary);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-brand: var(--color-brand);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+
+  --radius-sm: var(--ref-radius-sm);
+  --radius-md: var(--ref-radius-md);
+  --radius-lg: var(--ref-radius-lg);
+  --radius-xl: var(--ref-radius-xl);
+
+  --shadow-sm: var(--ref-shadow-sm);
+  --shadow-md: var(--ref-shadow-md);
+  --shadow-lg: var(--ref-shadow-lg);
+
+  --spacing-1: var(--ref-space-1);
+  --spacing-2: var(--ref-space-2);
+  --spacing-3: var(--ref-space-3);
+  --spacing-4: var(--ref-space-4);
+  --spacing-6: var(--ref-space-6);
+  --spacing-8: var(--ref-space-8);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--color-brand);
+  transition: color var(--ref-motion-duration-base) var(--ref-motion-ease-standard);
+}
+
+a:hover {
+  color: var(--color-brand-hover);
+}
+
+@keyframes progress-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes ds-modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ds-modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ds-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.42;
+  }
+}
+
+@layer utilities {
+  .ds-animate-modal-backdrop {
+    animation: ds-modal-backdrop-in var(--ref-motion-duration-base) var(--ref-motion-ease-standard) forwards;
+  }
+
+  .ds-animate-modal-panel {
+    animation: ds-modal-panel-in var(--ref-motion-duration-slow) var(--ref-motion-ease-standard) forwards;
+  }
+
+  .ds-animate-skeleton {
+    animation: ds-skeleton-pulse 1.8s ease-in-out infinite;
+  }
+}

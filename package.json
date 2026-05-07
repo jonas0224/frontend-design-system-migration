@@ -1,0 +1,20 @@
+{
+  "name": "frontend-design-system-migration",
+  "private": true,
+  "description": "Repo root — dependencies live in next-app/. Run npm install here once, then npm run dev.",
+  "scripts": {
+    "postinstall": "npm install --prefix next-app",
+    "dev": "npm --prefix next-app run dev",
+    "dev:turbo": "npm --prefix next-app run dev:turbo",
+    "build": "npm --prefix next-app run build",
+    "start": "npm --prefix next-app run start",
+    "lint": "npm --prefix next-app run lint",
+    "test": "npm --prefix next-app run test",
+    "test:unit": "npm --prefix next-app run test:unit",
+    "test:stories": "npm --prefix next-app run test:stories",
+    "format": "npm --prefix next-app run format",
+    "format:check": "npm --prefix next-app run format:check",
+    "storybook": "npm --prefix next-app run storybook",
+    "build-storybook": "npm --prefix next-app run build-storybook"
+  }
+}
