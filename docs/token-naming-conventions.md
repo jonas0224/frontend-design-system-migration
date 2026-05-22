@@ -16,10 +16,11 @@
 - Use lowercase and hyphen-separated names only.
 
 ## Theme Strategy
-- Default theme values are defined in `:root`.
-- Dark theme uses `[data-theme="dark"]` overrides.
-- Automatic fallback uses `@media (prefers-color-scheme: dark)` when no explicit `data-theme` is set.
-- Future theme toggle should only switch `data-theme` on `<html>`.
+- **Reference tokens** (`tokens-ref.css`): import in any app; values are stable scales.
+- **Semantic tokens** (`tokens-semantics.css`): default light/dark for the design-system playground only.
+- **Host themes**: consuming apps set `data-theme="your-app"` on `<html>` and map `--color-*` to local CSS variables (see `portfolio-personal` → `design-system-bridge.css`).
+- Do **not** import `tokens-semantics.css` in host apps — it applies blue defaults and OS dark-mode overrides that fight your palette.
+- Playground dark mode uses `[data-theme="dark"]`; automatic OS fallback only applies when `data-theme` is unset.
 
 ## Adoption Guidance
 - New components should consume semantic tokens first.

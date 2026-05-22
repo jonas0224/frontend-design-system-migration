@@ -1,0 +1,55 @@
+/*
+  Default semantic aliases for the design-system playground app.
+  Host apps should set their own semantics on html[data-theme="…"] instead of importing this file.
+*/
+
+:root {
+  --color-background: var(--ref-color-neutral-0);
+  --color-surface: var(--ref-color-neutral-50);
+  --color-surface-elevated: var(--ref-color-neutral-0);
+  --color-border: var(--ref-color-neutral-300);
+  --color-text-primary: var(--ref-color-neutral-900);
+  --color-text-secondary: var(--ref-color-neutral-500);
+  --color-brand: var(--ref-color-brand-500);
+  --color-brand-hover: var(--ref-color-brand-600);
+  --color-success: var(--ref-color-success-500);
+  --color-warning: var(--ref-color-warning-500);
+  --color-error: var(--ref-color-error-500);
+  --color-info: var(--ref-color-info-500);
+}
+
+[data-theme="dark"] {
+  --color-background: var(--ref-color-neutral-900);
+  --color-surface: #111827;
+  --color-surface-elevated: #1f2937;
+  --color-border: #374151;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-brand: var(--ref-color-brand-400);
+  --color-brand-hover: var(--ref-color-brand-500);
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #f87171;
+  --color-info: #60a5fa;
+
+  --ref-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --ref-shadow-md: 0 6px 16px rgb(0 0 0 / 0.5);
+  --ref-shadow-lg: 0 14px 30px rgb(0 0 0 / 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-background: var(--ref-color-neutral-900);
+    --color-surface: #111827;
+    --color-surface-elevated: #1f2937;
+    --color-border: #374151;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-brand: var(--ref-color-brand-400);
+    --color-brand-hover: var(--ref-color-brand-500);
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-error: #f87171;
+    --color-info: #60a5fa;
+  }
+}

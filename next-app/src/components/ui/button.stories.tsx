@@ -15,7 +15,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "ghost", "danger"],
+      options: ["primary", "secondary", "ghost", "danger", "outline"],
     },
     size: {
       control: "select",
@@ -31,3 +31,4 @@ export const Default: Story = {};
 export const Secondary: Story = { args: { variant: "secondary" } };
 export const Loading: Story = { args: { loading: true } };
 export const Danger: Story = { args: { variant: "danger", children: "Delete" } };
+export const Outline: Story = { args: { variant: "outline", children: "Say Hello" } };

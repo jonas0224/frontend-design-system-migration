@@ -18,13 +18,17 @@ Build and migrate to a reusable design system with consistent tokens, primitives
 - Avoid broad rewrites; migrate iteratively by feature/screen.
 
 ## Milestones
-- M1: Project foundation and tooling.
-- M2: Design tokens (color, spacing, typography, radius, shadow, motion).
-- M3: Core primitives (Button, Input, Textarea, Select, Card, Badge, Modal).
-- M4: Documentation and Storybook usage examples.
-- M5: Testing and visual regression workflow.
-- M6: Initial migration of highest-impact UI surfaces.
-- M7: Rollout metrics, cleanup, and handoff docs.
+- M1: Project foundation and tooling. **Done**
+- M2: Design tokens (color, spacing, typography, radius, shadow, motion). **Done**
+- M3: Core primitives (Button, Input, Textarea, Select, Card, Badge, Modal). **Done**
+- M4: Documentation and Storybook usage examples. **Done**
+- M5: Testing and visual regression workflow. **Done**
+- M6: Initial migration of highest-impact UI surfaces. **Done**
+- M7: Rollout metrics, cleanup, and handoff docs. **Done**
+
+## Progress log
+- 2026-05-07: Library MVP complete (tokens, primitives, Storybook, CI, playground).
+- 2026-05-20: Portfolio adoption complete (CTAs, cards, host bridge, case-study sections). TRADEOFFS.md + roadmap shipped.
 
 ## Risks and Mitigation
 - Scope creep -> lock MVP primitives first.

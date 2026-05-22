@@ -2,6 +2,16 @@
 
 Design-system workspace built around **semantic tokens**, **React primitives**, and **Storybook**. Use it as a reference implementation when migrating legacy UI to shared components, or as a starting point for a token-driven Next.js UI kit.
 
+**Status:** **Shipped** — library MVP (Phases 1–5) + portfolio adoption (Phase 6). Primitives are vendored into [`portfolio-personal`](../portfolio-personal/next-app/src/ui/) with a host theme bridge. See [`docs/adoption-plan.md`](docs/adoption-plan.md) and [`docs/TRADEOFFS.md`](docs/TRADEOFFS.md).
+
+### Portfolio adoption (what shipped)
+
+| Area | Primitives |
+|------|------------|
+| Hero, contact, nav, project links | `ButtonLink`, `OutlineLink` |
+| Roadmap tiles, featured blurbs, case-study sections | `Card` |
+| Theming | `design-system-bridge.css` + `data-theme="portfolio"` |
+
 ---
 
 ## Overview
@@ -142,6 +152,8 @@ npm run lint && npm run test:unit && npm run test:stories && npm run format:chec
 | [`docs/accessibility-guidelines.md`](docs/accessibility-guidelines.md) | Accessibility |
 | [`docs/migration-guide.md`](docs/migration-guide.md) | Migrating consuming apps |
 | [`docs/visual-regression-workflow.md`](docs/visual-regression-workflow.md) | Visual regression |
+| [`docs/TRADEOFFS.md`](docs/TRADEOFFS.md) | Architecture decisions |
+| [`docs/adoption-plan.md`](docs/adoption-plan.md) | Portfolio vendoring + migration log |
 
 App-specific notes: [`next-app/README.md`](next-app/README.md).
 

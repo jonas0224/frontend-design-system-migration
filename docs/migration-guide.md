@@ -36,3 +36,14 @@ Replace ad-hoc UI implementations with shared primitives from `next-app/src/comp
 - Start with highest-traffic/highest-change screens.
 - Keep old and new patterns side-by-side only during transition.
 - Remove dead legacy styles once migration is complete for that area.
+
+## Host theming (consuming apps)
+
+Primitives read **semantic** tokens (`--color-brand`, `--color-border`, …), not hardcoded hex. Each host app provides a theme file:
+
+1. Import `tokens-ref.css` only (reference scales).
+2. Set `data-theme="your-app"` on `<html>` to disable OS-driven default semantics.
+3. Map semantics in a bridge file, e.g. `--color-brand: var(--green);`
+4. Add component hooks if needed (`--ds-btn-font`, `--ds-btn-radius`) for legacy parity.
+
+Example: `portfolio-personal/next-app/src/styles/design-system-bridge.css`

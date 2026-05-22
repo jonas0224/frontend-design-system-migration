@@ -7,6 +7,16 @@ Legend:
 - [~] In progress
 - [x] Completed
 
+## Status summary (2026-05-20)
+
+| Phase | Status |
+|-------|--------|
+| **1–5 Library MVP** | **Complete** |
+| **6 Adoption (portfolio-personal)** | **Complete** |
+| **7 Handoff** | **Complete** |
+
+---
+
 ## 1) Foundation
 - [x] Initialize Next.js + TypeScript project structure.
 - [x] Add Tailwind CSS and base style setup.
@@ -19,6 +29,7 @@ Legend:
 - [x] Add semantic token aliases (success, warning, error, info, brand).
 - [x] Implement light/dark theme strategy.
 - [x] Document token naming conventions.
+- [x] Split `tokens-ref.css` / `tokens-semantics.css` for host theming.
 
 ## 3) Primitive Components
 - [x] Build `Button` (variants, sizes, disabled/loading states).
@@ -39,13 +50,14 @@ Legend:
 - [x] Add pre-merge quality checks and scripts.
 
 ## 6) Migration Rollout
-- [ ] Identify top-priority migration targets.
-- [ ] Migrate first high-impact screen.
-- [ ] Migrate second high-impact screen.
-- [ ] Track defects/regressions and fixes.
-- [ ] Track adoption progress (% migrated or list completed).
+- [x] Identify top-priority migration targets.
+- [x] Migrate outline CTAs (hero, contact, nav, featured, roadmap, project links).
+- [x] Migrate Card (roadmap tiles, featured blurbs, case-study sections).
+- [x] Host theme bridge + `data-theme="portfolio"`.
+- [x] Track adoption progress.
 
 ## 7) Handoff
-- [ ] Finalize contributing docs.
-- [ ] Finalize architecture decisions and tradeoffs.
-- [ ] Define v2 roadmap (advanced components + automation).
+- [x] Finalize architecture tradeoffs ([TRADEOFFS.md](./TRADEOFFS.md)).
+- [x] Update README with adoption summary.
+- [x] Mark shipped on portfolio roadmap.
+- [x] Define v2 roadmap (see TRADEOFFS.md — Badge, CMS forms, npm package).
