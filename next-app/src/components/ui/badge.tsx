@@ -9,7 +9,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 
 const variantClass: Record<BadgeVariant, string> = {
   neutral: "bg-[var(--color-surface)] text-[var(--color-text-secondary)]",
-  brand: "bg-[color-mix(in_srgb,var(--color-brand)_16%,transparent)] text-[var(--color-brand)]",
+  brand: "bg-[color-mix(in_srgb,var(--color-brand)_20%,transparent)] text-[var(--color-brand-hover)]",
   success:
     "bg-[color-mix(in_srgb,var(--color-success)_16%,transparent)] text-[var(--color-success)]",
   warning:

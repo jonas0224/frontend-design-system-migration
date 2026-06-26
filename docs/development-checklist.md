@@ -7,13 +7,14 @@ Legend:
 - [~] In progress
 - [x] Completed
 
-## Status summary (2026-05-20)
+## Status summary (2026-06-26)
 
 | Phase | Status |
 |-------|--------|
 | **1–5 Library MVP** | **Complete** |
 | **6 Adoption (portfolio-personal)** | **Complete** |
 | **7 Handoff** | **Complete** |
+| **v2 Phase A (correctness + a11y CI)** | **Complete** — see [v2-implementation-plan.md](./v2-implementation-plan.md) |
 
 ---
 

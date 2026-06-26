@@ -86,6 +86,35 @@ a:hover {
   }
 }
 
+/*
+  Default outline-button hooks (variant="outline").
+  Host apps may override in their theme bridge for legacy parity (e.g. offset shadow).
+*/
+.ds-btn-outline,
+.ds-btn-outline-sm {
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    color var(--ref-motion-duration-base) var(--ref-motion-ease-standard),
+    box-shadow var(--ref-motion-duration-base) var(--ref-motion-ease-standard),
+    transform var(--ref-motion-duration-base) var(--ref-motion-ease-standard);
+}
+
+.ds-btn-outline:hover,
+.ds-btn-outline:focus-visible {
+  outline: none;
+  color: var(--color-brand-hover);
+  box-shadow: var(--ref-shadow-sm);
+}
+
+.ds-btn-outline-sm:hover,
+.ds-btn-outline-sm:focus-visible {
+  outline: none;
+  color: var(--color-brand-hover);
+  box-shadow: var(--ref-shadow-sm);
+}
+
 @layer utilities {
   .ds-animate-modal-backdrop {
     animation: ds-modal-backdrop-in var(--ref-motion-duration-base) var(--ref-motion-ease-standard) forwards;

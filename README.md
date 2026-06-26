@@ -2,7 +2,7 @@
 
 Design-system workspace built around **semantic tokens**, **React primitives**, and **Storybook**. Use it as a reference implementation when migrating legacy UI to shared components, or as a starting point for a token-driven Next.js UI kit.
 
-**Status:** **Shipped** — library MVP (Phases 1–5) + portfolio adoption (Phase 6). Primitives are vendored into [`portfolio-personal`](../portfolio-personal/next-app/src/ui/) with a host theme bridge. See [`docs/adoption-plan.md`](docs/adoption-plan.md) and [`docs/TRADEOFFS.md`](docs/TRADEOFFS.md).
+**Status:** **Shipped** (v1) — library MVP (Phases 1–5) + portfolio adoption (Phase 6). **v2** in progress — see [`docs/v2-implementation-plan.md`](docs/v2-implementation-plan.md).
 
 ### Portfolio adoption (what shipped)
 
@@ -151,7 +151,8 @@ npm run lint && npm run test:unit && npm run test:stories && npm run format:chec
 | [`docs/token-naming-conventions.md`](docs/token-naming-conventions.md) | Token naming |
 | [`docs/accessibility-guidelines.md`](docs/accessibility-guidelines.md) | Accessibility |
 | [`docs/migration-guide.md`](docs/migration-guide.md) | Migrating consuming apps |
-| [`docs/visual-regression-workflow.md`](docs/visual-regression-workflow.md) | Visual regression |
+| [`docs/visual-regression-workflow.md`](docs/visual-regression-workflow.md) | Storybook interaction + a11y tests |
+| [`docs/v2-implementation-plan.md`](docs/v2-implementation-plan.md) | v2 roadmap (distribution, CMS, visual baselines) |
 | [`docs/TRADEOFFS.md`](docs/TRADEOFFS.md) | Architecture decisions |
 | [`docs/adoption-plan.md`](docs/adoption-plan.md) | Portfolio vendoring + migration log |
 

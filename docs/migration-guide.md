@@ -44,6 +44,6 @@ Primitives read **semantic** tokens (`--color-brand`, `--color-border`, …), no
 1. Import `tokens-ref.css` only (reference scales).
 2. Set `data-theme="your-app"` on `<html>` to disable OS-driven default semantics.
 3. Map semantics in a bridge file, e.g. `--color-brand: var(--green);`
-4. Add component hooks if needed (`--ds-btn-font`, `--ds-btn-radius`) for legacy parity.
+4. Add component hooks if needed (`--ds-btn-font`, `--ds-btn-radius`, `.ds-btn-outline` overrides) for legacy parity. Default outline styles ship in the design-system `globals.css`; hosts override in the bridge.
 
 Example: `portfolio-personal/next-app/src/styles/design-system-bridge.css`

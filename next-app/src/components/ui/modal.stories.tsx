@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { expect, fn, userEvent, within } from "storybook/test";
 import { useState } from "react";
 import { Button } from "./button";
 import { Input } from "./input";
@@ -46,5 +47,27 @@ export const Default: Story = {
     }
 
     return <Demo />;
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole("button", { name: "Open modal" }));
+    const dialog = await within(document.body).findByRole("dialog");
+    await expect(dialog).toHaveAccessibleName("Invite collaborator");
+    await userEvent.keyboard("{Escape}");
+    await expect(dialog).not.toBeInTheDocument();
+  },
+};
+
+export const Open: Story = {
+  args: {
+    open: true,
+    onClose: fn(),
+    title: "Review migration",
+    description: "Confirm the checklist before merge.",
+  },
+  play: async () => {
+    const dialog = await within(document.body).findByRole("dialog");
+    await expect(dialog).toHaveAccessibleName("Review migration");
+    await expect(dialog).toHaveAccessibleDescription("Confirm the checklist before merge.");
   },
 };

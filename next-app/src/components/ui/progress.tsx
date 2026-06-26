@@ -12,6 +12,8 @@ export interface ProgressProps extends Omit<HTMLAttributes<HTMLDivElement>, "chi
   size?: ProgressSize;
   /** Track fill color token intent */
   tone?: "brand" | "success";
+  /** Accessible name for the progressbar (required for axe / screen readers). */
+  label?: string;
 }
 
 const sizeClass: Record<ProgressSize, string> = {
@@ -30,16 +32,19 @@ export function Progress({
   indeterminate = false,
   size = "md",
   tone = "brand",
+  label,
   className,
   ...props
 }: ProgressProps) {
   const clamped = Math.min(max, Math.max(0, value));
   const percent = max <= 0 ? 0 : Math.round((clamped / max) * 100);
+  const accessibleName = label ?? (indeterminate ? "Loading" : "Progress");
 
   return (
     <div className={cx("w-full min-w-[120px]", className)} {...props}>
       <div
         role="progressbar"
+        aria-label={accessibleName}
         {...(indeterminate
           ? { "aria-valuetext": "Loading" }
           : {

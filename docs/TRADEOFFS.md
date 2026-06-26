@@ -34,7 +34,7 @@ Decisions made during the design-system and portfolio adoption work.
 
 ## Portfolio-specific component classes (`.ds-card-portfolio`, `.ds-btn-outline`)
 
-**Choice:** Bridge provides layout/hover parity classes instead of forking primitives.
+**Choice:** Bridge provides layout/hover parity classes instead of forking primitives. The design-system repo ships **neutral defaults** for `.ds-btn-outline` in `globals.css`; portfolio overrides with offset-shadow parity in `design-system-bridge.css`.
 
 **Why:** Legacy portfolio look (offset shadow, mono CTAs, navy tiles) without `variant="portfolio"` on every primitive.
 
