@@ -6,11 +6,14 @@ Design-system workspace built around **semantic tokens**, **React primitives**, 
 
 ### Portfolio adoption (what shipped)
 
-| Area | Primitives |
-|------|------------|
-| Hero, contact, nav, project links | `ButtonLink`, `OutlineLink` |
-| Roadmap tiles, featured blurbs, case-study sections | `Card` |
-| Theming | `design-system-bridge.css` + `data-theme="portfolio"` |
+| Consumer | Theme | Primitives |
+|----------|-------|------------|
+| portfolio-personal | `portfolio` | `ButtonLink`, `OutlineLink`, `Card` |
+| realtime-operations-dashboard | `ops` | `Button`, `Badge`, `Card`, `Spinner` |
+| portfolio-content-management | `cms` | `Input`, `Select`, `Textarea`, `Button`, `Card` |
+| flashcut (lobby) | `flashcut` | `Input`, `Button`, `Card` |
+
+Full matrix: [docs/adoption-plan.md](docs/adoption-plan.md). **POS** (Archive Room) uses shadcn/ui — intentionally separate.
 
 ---
 
